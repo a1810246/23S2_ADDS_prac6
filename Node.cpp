@@ -1,4 +1,4 @@
-#include "Node.cpp"
+#include "Node.h"
 
 Node:Node(int data, Node* link):data(data),link(link){
 
