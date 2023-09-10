@@ -140,8 +140,8 @@ void LinkedList::printList()
     cout << "[";
     while(curr != nullptr)
     {
-        cout<<curr->data<<" ";
-        //curr = curr->link;
+        /*cout<<curr->data<<" ";
+        curr = curr->link;*/
         cout << curr->data;
         if (curr->link != nullptr) {
             cout << " ";
