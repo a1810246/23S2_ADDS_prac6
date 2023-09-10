@@ -109,16 +109,6 @@ int LinkedList::get(int pos)
     }
 }
 
-int LinkedList::search(int target)
-{
-    int i=1;
-    Node* curr=head;
-    while(curr != nullptr && curr->data != target)
-    {
-        curr = curr->link;
-        i++;
-    }
-}
 
 int LinkedList::search(int target)
 {

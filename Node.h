@@ -1,3 +1,5 @@
+#ifndef NODE_H
+#define NODE_H
 #include<list>
 class Node
 {
@@ -10,3 +12,5 @@ class Node
         int data;
         Node* link;
 };
+
+#endif 
