@@ -2,6 +2,7 @@
 class Node
 {
     public:
+        friend class LinkedList;
         Node();
         Node(int data, Node* link);
 

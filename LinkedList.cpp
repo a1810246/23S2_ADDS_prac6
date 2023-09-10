@@ -25,5 +25,15 @@ void LinkedList::insertPosition(int pos, int newNum)
     if(head == nullptr || pos<=1)
     {
         head = new Node(newNum, head);
+        return;
     }
+
+    Node* curr = head;
+    for(int i=0; i<pos-1 && curr->link != nullptr; i++)
+    {
+        curr = curr->link;
+    }
+
+    Node* newNode = new Node(newNum, curr->link);
+    curr->link = newNode;
 }
