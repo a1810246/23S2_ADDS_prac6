@@ -137,9 +137,16 @@ void LinkedList::printList()
 
     Node* curr = head;
 
+    cout << "[";
     while(curr != nullptr)
     {
         cout<<curr->data<<" ";
+        //curr = curr->link;
+        cout << curr->data;
+        if (curr->link != nullptr) {
+            cout << " ";
+        }
         curr = curr->link;
     }
+    cout << "]";
 }
