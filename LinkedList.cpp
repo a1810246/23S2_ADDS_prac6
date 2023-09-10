@@ -42,7 +42,7 @@ void LinkedList::insertPosition(int pos, int newNum)
     }
 
     Node* curr = head;
-    for(int i=0; i<pos-1 && curr->link != nullptr; i++)
+    for(int i=1; i<pos-1 && curr->link != nullptr; i++)
     {
         curr = curr->link;
     }
