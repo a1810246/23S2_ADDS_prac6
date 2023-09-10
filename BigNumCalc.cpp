@@ -7,7 +7,7 @@ list<int> bigNumCalc::buildBigNum(string numString)
 
     for(int i=0; i<length; i++)
     {
-        //Converting string to int
+        //Converting string to int by minus '0'
         bigNum.push_back(numString[i]-'0');
     }
 
@@ -40,7 +40,7 @@ list<int> bigNumCalc::add(list<int> num1, list<int> num2)
 
         if(c>=10)
         {
-            c=c-10;
+            c=c%10;
             carry=1;
         }
         else
