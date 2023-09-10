@@ -1,6 +1,8 @@
 #include<iostream>
 #include "LinkedList.h"
 #include "Node.h"
+using namespace std;
+
 
 LinkedList::LinkedList()
 {
@@ -62,5 +64,47 @@ bool LinkedList::deletePosition(int pos){
         {
             return false;
         }
+        else
+        {
+            Node* deleteNode = prev->link;
+            prev->link = deleteNode->link;
+            delete deleteNode;
+            return true;
+        }
+    }
+}
+
+int LinkedList::get(int pos)
+{
+    if(pos<1 || head == nullptr)
+    {
+        return numeric_limits < int >::max();
+    }
+    else
+    {
+        Node* curr = head;
+        for(int i = 1; i<pos && curr!=nullptr; i++)
+        {
+            curr = curr->link;
+        }
+        if(curr == nullptr)
+        {
+            return numeric_limits < int >::max();
+        }
+        else
+        {
+            return curr->data;
+        }
+    }
+}
+
+int LinkedList::search(int target)
+{
+    int i=1;
+    Node* curr=head;
+    while(curr != nullptr && curr->data != target)
+    {
+        curr = curr->link;
+        i++;
     }
 }
