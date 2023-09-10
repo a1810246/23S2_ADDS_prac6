@@ -108,3 +108,37 @@ int LinkedList::search(int target)
         i++;
     }
 }
+
+int LinkedList::search(int target)
+{
+    int i=1;
+    Node* curr = head;
+    while(curr != nullptr && curr->data != target)
+    {
+        curr = curr->link;
+        i++;
+    }
+
+    if(curr = nullptr)
+    {
+        return -1;
+    }
+
+    return 1;
+}
+
+void LinkedList::printList()
+{
+    if(head == nullptr)
+    {
+        return;
+    }
+
+    Node* curr = head;
+
+    while(curr != nullptr)
+    {
+        cout<<curr->data<<" ";
+        curr = curr->link;
+    }
+}
