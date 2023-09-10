@@ -37,3 +37,30 @@ void LinkedList::insertPosition(int pos, int newNum)
     Node* newNode = new Node(newNum, curr->link);
     curr->link = newNode;
 }
+
+bool LinkedList::deletePosition(int pos){
+    if(head == nullptr || pos<1)
+    {
+        return false;
+    }
+    
+    if(pos == 1){
+    Node* deleteNode = head;
+    head = head -> link;
+    delete deleteNode;
+    return true;
+    }
+
+    else{
+        Node* prev = head;
+        for(int i=1; i<pos-1 && prev->link!=nullptr; i++)
+        {
+            prev = prev -> link;
+        }
+
+        if(prev->link == nullptr)
+        {
+            return false;
+        }
+    }
+}
