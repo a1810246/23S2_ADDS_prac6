@@ -19,7 +19,17 @@ LinkedList::LinkedList(int* array, int len)
 
 LinkedList::~LinkedList()
 {
+    if(head == nullptr)
+    {
+        return;
+    }
 
+    Node* curr = head;
+
+    while(curr != nullptr)
+    {
+        curr = nullptr;
+    }
 }
 
 void LinkedList::insertPosition(int pos, int newNum)
