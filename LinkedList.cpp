@@ -20,16 +20,11 @@ LinkedList::LinkedList(int* array, int len)
 
 LinkedList::~LinkedList()
 {
-    if(head == nullptr)
+     while (head != nullptr)
     {
-        return;
-    }
-
-    Node* curr = head;
-
-    while(curr != nullptr)
-    {
-        curr = nullptr;
+        Node* temp = head; // 临时指针指向当前节点
+        head = head->link; // 移动头指针到下一个节点
+        delete temp;       // 删除当前节点
     }
 }
 
@@ -120,7 +115,7 @@ int LinkedList::search(int target)
         i++;
     }
 
-    if(curr = nullptr)
+    if(curr == nullptr)
     {
         return -1;
     }
