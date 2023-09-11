@@ -1,6 +1,6 @@
 #include "BigNumCalc.h"
 
-list<int> bigNumCalc::buildBigNum(string numString)
+list<int> BigNumCalc::buildBigNum(string numString)
 {
     list<int>bigNum;
     int length = numString.length();
@@ -14,7 +14,7 @@ list<int> bigNumCalc::buildBigNum(string numString)
     return bigNum;
 }
 
-list<int> bigNumCalc::add(list<int> num1, list<int> num2)
+list<int> BigNumCalc::add(list<int> num1, list<int> num2)
 {
     list<int>sum;
     int carry = 0;
@@ -63,7 +63,7 @@ list<int> bigNumCalc::add(list<int> num1, list<int> num2)
 
 }
 
-list<int> bigNumCalc::sub(list<int> num1, list<int> num2)
+list<int> BigNumCalc::sub(list<int> num1, list<int> num2)
 {
     list<int> result; // 存储结果的链表
     int borrow = 0;   // 借位初始化为0

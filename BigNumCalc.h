@@ -2,7 +2,7 @@
 #include<list>
 using namespace std;
 
-class bigNumCalc
+class BigNumCalc
 {
     public:
         list<int> buildBigNum(string numString);
